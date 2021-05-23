@@ -1,0 +1,1 @@
+const imageUrl= 'https://www.tbsnews.net/sites/default/files/styles/big_3/public/images/2021/05/10/netflix-logo_jpg.jpg?itok=hr7lolIl&timestamp=1620628420';
