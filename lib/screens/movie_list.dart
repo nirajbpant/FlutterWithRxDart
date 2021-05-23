@@ -2,12 +2,31 @@ import 'package:blocimpl/blocs/movies_bloc.dart';
 import 'package:blocimpl/models/movies.dart';
 import 'package:flutter/material.dart';
 
-class MovieList extends StatelessWidget {
+class MovieList extends StatefulWidget {
   const MovieList({Key key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  _MovieListState createState() => _MovieListState();
+}
+
+class _MovieListState extends State<MovieList> {
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
     movieBloc.fetchAllMovies();
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    movieBloc.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Famous Movie List'), 
